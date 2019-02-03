@@ -94,7 +94,7 @@ void Model::createCollectable(float x, float y, float z)
 void Model::createEndZone(float x, float y, float z)
 {
 	end_zone = new GameObject();
-	end_zone->loadObject("enemy.obj");
+	end_zone->loadObject("box.obj");
 	end_zone->setPosition(glm::vec3(x,y,z));
 	end_zone->createBoundingBox();
 }
@@ -102,7 +102,7 @@ void Model::createEndZone(float x, float y, float z)
 void Model::createEnemy(float x, float y, float z, glm::vec3 direction)
 {
 	Enemy* enemy = new Enemy(direction);
-	enemy->loadObject("box.obj");
+	enemy->loadObject("enemy.obj");
 	enemy->createBoundingBox();
 	enemy->setPosition(glm::vec3(x, y, z));
 	enemy->fillColour(glm::vec3(1, 0, 0));
